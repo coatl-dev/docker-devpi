@@ -1,8 +1,15 @@
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    labels: ["dependencies"]
+    labels: ["gh-dependencies"]
+
+  - package-ecosystem: "pip"
+    directory: "/requirements"
+    schedule:
+      interval: "monthly"
+    labels: ["pip-dependencies"]
+    commit-message:
+      prefix: "pip"
