@@ -6,9 +6,10 @@ LABEL \
   vendor="coatl.dev"
 
 # Set environment variables
-ENV PIP_NO_CACHE_DIR="off"
-ENV PIP_INDEX_URL="https://pypi.python.org/simple"
-ENV PIP_TRUSTED_HOST="127.0.0.1"
+ENV PIP_DISABLE_PIP_VERSION_CHECK 1
+ENV PIP_INDEX_URL https://pypi.python.org/simple
+ENV PIP_NO_CACHE_DIR 1
+ENV PIP_TRUSTED_HOST 127.0.0.1
 ENV VIRTUAL_ENV /env
 
 # Install missing packages
@@ -31,8 +32,7 @@ COPY requirements /tmp/requirements/
 
 # Install virtualenv
 RUN set -eux; \
-        python -m pip install --no-cache-dir \
-            --disable-pip-version-check \
+        python -m pip install \
             --requirement /tmp/requirements/virtualenv.txt
 
 # Create virtualenv
@@ -42,8 +42,7 @@ ENV PATH ${VIRTUAL_ENV}/bin:${PATH}
 
 # Install devpi
 RUN set -eux; \
-        python -m pip install --no-cache-dir \
-            --disable-pip-version-check \
+        python -m pip install \
             --requirement /tmp/requirements/devpi.txt
 
 EXPOSE 3141
