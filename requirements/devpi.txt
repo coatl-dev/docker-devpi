@@ -375,9 +375,9 @@ defusedxml==0.7.1 \
     # via
     #   devpi-server
     #   devpi-web
-devpi-client==6.0.4 \
-    --hash=sha256:2077e7966a1f7926228b82a24eca2bee1c07563413785aba0e240fc5676fe247 \
-    --hash=sha256:b87309e9af657ea4f104381b29816afc08f8821920091ca182fdbb11ec9f00d6
+devpi-client==6.0.5 \
+    --hash=sha256:2b375c012c8910e40365b2d169f0446c701c202ee2c6a0d014bcb884cfea0196 \
+    --hash=sha256:7f216dea565c0f366340edaad6c78b81bb0e712ebab85e2f97cc3c49eebd06ee
     # via -r devpi.in
 devpi-common==3.7.2 \
     --hash=sha256:9078989279ad79e9c181c7badc4a738460445187101eb0cbade675934d5e4644 \
@@ -734,14 +734,6 @@ strictyaml==1.7.3 \
     --hash=sha256:22f854a5fcab42b5ddba8030a0e4be51ca89af0267961c8d6cfa86395586c407 \
     --hash=sha256:fb5c8a4edb43bebb765959e420f9b3978d7f1af88c80606c03fb420888f5d1c7
     # via devpi-server
-tomli==2.0.1 \
-    --hash=sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc \
-    --hash=sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f
-    # via
-    #   build
-    #   check-manifest
-    #   pep517
-    #   pyproject-hooks
 translationstring==1.4 \
     --hash=sha256:5f4dc4d939573db851c8d840551e1a0fb27b946afe3b95aafc22577eed2d6262 \
     --hash=sha256:bf947538d76e69ba12ab17283b10355a9ecfbc078e6123443f43f2107f6376f3
