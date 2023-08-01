@@ -14,6 +14,7 @@ ENV VIRTUAL_ENV /env
 
 # Install missing packages
 RUN set -eux; \
+    \
     export DEBIAN_FRONTEND=noninteractive; \
     apt-get update --quiet; \
     apt-get install --yes --no-install-recommends \
@@ -23,8 +24,9 @@ RUN set -eux; \
 
 # Create devpi user
 RUN set -eux; \
-        addgroup --system --gid 1000 devpi; \
-        adduser --disabled-password --system --uid 1000 --home /data \
+    \
+    addgroup --system --gid 1000 devpi; \
+    adduser --disabled-password --system --uid 1000 --home /data \
         --shell /sbin/nologin --gid 1000 devpi
 
 # Copy requirements
@@ -32,18 +34,23 @@ COPY requirements /tmp/requirements/
 
 # Install virtualenv
 RUN set -eux; \
-        python -m pip install \
-            --requirement /tmp/requirements/virtualenv.txt
+    \
+    python -m pip install \
+        --requirement /tmp/requirements/virtualenv.txt
 
 # Create virtualenv
 RUN set -eux; \
-        python -m virtualenv ${VIRTUAL_ENV}
+    \
+    python -m virtualenv ${VIRTUAL_ENV}
+
+# Prepend virtualenv to PATH
 ENV PATH ${VIRTUAL_ENV}/bin:${PATH}
 
 # Install devpi
 RUN set -eux; \
-        python -m pip install \
-            --requirement /tmp/requirements/devpi.txt
+    \
+    python -m pip install \
+        --requirement /tmp/requirements/devpi.txt
 
 EXPOSE 3141
 VOLUME /data
