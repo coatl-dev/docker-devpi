@@ -392,9 +392,9 @@ devpi-server==6.9.1 \
     # via
     #   -r devpi.in
     #   devpi-web
-devpi-web==4.2.0 \
-    --hash=sha256:3941c0f081fd59c4b470c67785c494a12ca55841ce76fbb5f6b8ca8aefc56454 \
-    --hash=sha256:72147b55a38a8b21566abe4e6319e0d4ffbf544fa0eff3749239541b66be25a1
+devpi-web==4.2.1 \
+    --hash=sha256:4787012821355fecd51244741f6cd188f5c965b7f845cb21eaf87e2ff0536b80 \
+    --hash=sha256:aefa99440f31a101cb3ecc38906cd49db1facd9c425d1c1263f4d032d604b039
     # via -r devpi.in
 docutils==0.20.1 \
     --hash=sha256:96f387a2c5562db4476f09f13bbab2192e764cac08ebbf3a34a95d9b1e4a59d6 \
