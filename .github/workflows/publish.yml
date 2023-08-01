@@ -12,6 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Get version number
+        run: |
+          TAG_NAME=${{ github.event.release.tag_name }}
+          echo "TAG=${TAG_NAME:1}" >> $GITHUB_ENV
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
@@ -30,7 +35,7 @@ jobs:
             linux/arm64
           push: true
           tags: |
-            coatldev/devpi:${{ github.event.release.tag_name }}
+            coatldev/devpi:${{ env.TAG }}
             coatldev/devpi:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
