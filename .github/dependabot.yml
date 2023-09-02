@@ -9,7 +9,7 @@ updates:
   - package-ecosystem: "pip"
     directory: "/requirements"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
     labels: ["pip-dependencies"]
     commit-message:
       prefix: "pip"
