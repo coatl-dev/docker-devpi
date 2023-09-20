@@ -1,6 +1,5 @@
 # docker-devpi
 
-[![Lint Dockerfile](https://github.com/coatl-dev/docker-devpi/actions/workflows/main.yml/badge.svg)](https://github.com/coatl-dev/docker-devpi/actions/workflows/main.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/coatl-dev/docker-devpi/coatl.svg)](https://results.pre-commit.ci/latest/github/coatl-dev/docker-devpi/coatl)
 ![Docker Pulls](https://img.shields.io/docker/pulls/coatldev/devpi)
 
