@@ -486,9 +486,9 @@ itsdangerous==2.1.2 \
     --hash=sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44 \
     --hash=sha256:5dbbc68b317e5e42f327f9021763545dc3fc3bfe22e6deb96aaf1fc38874156a
     # via devpi-server
-lazy==1.5 \
-    --hash=sha256:7b8bc7e0136f96722bf9e41eec7472495059526bfa1195db61d43e8da6bbe604 \
-    --hash=sha256:cb3d8612aa895a48afe8f08860573ba8ef5ee4fdbe1b3cd606c5f50a16152186
+lazy==1.6 \
+    --hash=sha256:449375c125c7acac6b7a93f71b8e7ccb06546c37b161613f92d2d3981f793244 \
+    --hash=sha256:7127324ec709e8324f08cb4611c1abe01776bda53bb9ce68dc5dfa46ca0ed3e9
     # via
     #   devpi-common
     #   devpi-server
