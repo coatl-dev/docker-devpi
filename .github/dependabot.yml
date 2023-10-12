@@ -10,6 +10,9 @@ updates:
     directory: "/requirements"
     schedule:
       interval: "weekly"
+    allow:
+      # Allow both direct and indirect updates for all packages
+      - dependency-type: "all"
     labels: ["pip-dependencies"]
     commit-message:
-      prefix: "pip"
+      prefix: "refactor"
