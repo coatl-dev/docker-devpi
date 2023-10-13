@@ -4,15 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    labels: ["gh-dependencies"]
-
-  - package-ecosystem: "pip"
-    directory: "/requirements"
-    schedule:
-      interval: "weekly"
-    allow:
-      # Allow both direct and indirect updates for all packages
-      - dependency-type: "all"
-    labels: ["pip-dependencies"]
+    labels: ["dependencies"]
     commit-message:
-      prefix: "refactor"
+      prefix: "ci(gh)"
