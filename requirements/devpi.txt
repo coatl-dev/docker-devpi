@@ -191,9 +191,9 @@ cffi==1.16.0 \
     # via
     #   argon2-cffi-bindings
     #   cmarkgfm
-chameleon==4.2.0 \
-    --hash=sha256:2a7bda67ba9f8fa31d1e17b8d1cefdae8687741293ffe0938e831e71843b4751 \
-    --hash=sha256:6e9dfa613a09097c5bfb42546f9f2178747c97ea13ca0f4f3e9d047b646d39d0
+chameleon==4.3.0 \
+    --hash=sha256:5105991bc4f69f4f4061af5318528a6953c0427a30d7cde4cb9d94405f1aac23 \
+    --hash=sha256:c43a886f204a6fad9967f8473d3017316204a0cdedfd9803a1d2c1f62b2bc79b
     # via pyramid-chameleon
 charset-normalizer==3.3.2 \
     --hash=sha256:06435b539f889b1f6f4ac1758871aae42dc3a8c0e24ac9e60c2384973ad73027 \
@@ -598,9 +598,9 @@ plaster-pastedeploy==1.0.1 \
     --hash=sha256:ad3550cc744648969ed3b810f33c9344f515ee8d8a8cec18e8f2c4a643c2181f \
     --hash=sha256:be262e6d2e41a7264875daa2fe2850cbb0615728bcdc92828fdc72736e381412
     # via pyramid
-platformdirs==4.0.0 \
-    --hash=sha256:118c954d7e949b35437270383a3f2531e99dd93cf7ce4dc8340d3356d30f173b \
-    --hash=sha256:cb633b2bcf10c51af60beb0ab06d2f1d69064b43abf4c185ca6b28865f3f9731
+platformdirs==4.1.0 \
+    --hash=sha256:11c8f37bcca40db96d8144522d925583bdb7a31f7b0e37e3ed4318400a8e2380 \
+    --hash=sha256:906d548203468492d432bcb294d4bc2fff751bf84971fbb2c10918cc206ee420
     # via
     #   devpi-client
     #   devpi-server
