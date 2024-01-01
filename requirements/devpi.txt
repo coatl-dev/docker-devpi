@@ -37,9 +37,9 @@ argon2-cffi-bindings==21.2.0 \
     --hash=sha256:f1152ac548bd5b8bcecfb0b0371f082037e47128653df2e8ba6e914d384f3c3e \
     --hash=sha256:f9f8b450ed0547e3d473fdc8612083fd08dd2120d6ac8f73828df9b7d45bb351
     # via argon2-cffi
-attrs==23.1.0 \
-    --hash=sha256:1f28b4522cdc2fb4256ac1a020c78acf9cba2c6b461ccd2c126f3aa8e8335d04 \
-    --hash=sha256:6279836d581513a26f1bf235f9acd333bc9115683f14f7e8fae46c98fc50e015
+attrs==23.2.0 \
+    --hash=sha256:935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30 \
+    --hash=sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1
     # via devpi-server
 beautifulsoup4==4.12.2 \
     --hash=sha256:492bbc69dca35d12daac71c4db1bfff0c876c00ef4a2ffacce226d4638eb72da \
@@ -114,9 +114,9 @@ cffi==1.16.0 \
     # via
     #   argon2-cffi-bindings
     #   cmarkgfm
-chameleon==4.4.2 \
-    --hash=sha256:a9f10797b8931b8f30834046f6cd7b76f7851e9d27abcae12f45806148caa47e \
-    --hash=sha256:b826dd5cc1327acdbd57a08db0bd5d8f549aa750cf38232a120f378394574987
+chameleon==4.4.3 \
+    --hash=sha256:539013b876d29c19d736e3f7edd44cd9fbec7a65aef3aa956cca495d116a46d3 \
+    --hash=sha256:7ebdb2f962cb1b755d6f263438073f0887f371af585a66d21ab9ea240b418369
     # via pyramid-chameleon
 charset-normalizer==3.3.2 \
     --hash=sha256:06435b539f889b1f6f4ac1758871aae42dc3a8c0e24ac9e60c2384973ad73027 \
