@@ -4,7 +4,7 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/coatldev/devpi)
 
 Docker image with `devpi-client`, `devpi-server` and `devpi-web` pre-installed
-using [`python:3.11-slim`].
+using [`python:3.12-slim`].
 
 ## Supported tags
 
@@ -21,4 +21,4 @@ using [`python:3.11-slim`].
 [`6.9`, `6.9.2`]: https://github.com/coatl-dev/docker-devpi/blob/6.9.2/Dockerfile
 [`6.9.1`]: https://github.com/coatl-dev/docker-devpi/blob/6.9.1/Dockerfile
 [`6.9.0`]: https://github.com/coatl-dev/docker-devpi/blob/6.9.0/Dockerfile
-[`python:3.11-slim`]: https://github.com/docker-library/python/blob/HEAD/3.11/slim-bookworm/Dockerfile
+[`python:3.12-slim`]: https://github.com/docker-library/python/blob/HEAD/3.12/slim-bookworm/Dockerfile
