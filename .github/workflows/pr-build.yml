@@ -1,4 +1,4 @@
-name: Lint and build Dockerfile
+name: pr-build
 
 on:
   pull_request:
