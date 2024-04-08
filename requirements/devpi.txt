@@ -114,9 +114,9 @@ cffi==1.16.0 \
     # via
     #   argon2-cffi-bindings
     #   cmarkgfm
-chameleon==4.5.2 \
-    --hash=sha256:4c39144282b9fa37046ce04012178650f3b5b5ae3219e142b6c799c89932403f \
-    --hash=sha256:8fc0e5ae67c68a589c0ab3fe230d473950204e36e926ffeecf878c4717382616
+chameleon==4.5.4 \
+    --hash=sha256:42f646e1208e8cdcc106182b246adf11900e89cbe4440ba334d28c4087bb02f1 \
+    --hash=sha256:efca0e1c796ec8f0fa011d90940d48a8f935e23757d6fa95c1c032f235a73f13
     # via pyramid-chameleon
 charset-normalizer==3.3.2 \
     --hash=sha256:06435b539f889b1f6f4ac1758871aae42dc3a8c0e24ac9e60c2384973ad73027 \
