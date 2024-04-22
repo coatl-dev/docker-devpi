@@ -8,16 +8,19 @@ using [`python:3.12-slim`].
 
 ## Supported tags
 
-- [`6`, `6.10`, `6.10.0`, `latest`] - Comes with `devpi-server` 6.10.0, `devpi-web`
-  4.2.1 and `devpi-client` 7.0.2.
-- [`6.9`, `6.9.2`] - Comes with `devpi-server` 6.9.2, `devpi-web`
-  4.2.1 and `devpi-client` 6.0.5.
+- [`6`, `6.11`, `6.11.0`, `latest`] - Comes with `devpi-server` 6.11.0, `devpi-web`
+  4.2.2 and `devpi-client` 7.0.3.
+- [`6.10`, `6.10.0`] - Comes with `devpi-server` 6.10.0, `devpi-web` 4.2.1 and
+  `devpi-client` 7.0.2.
+- [`6.9`, `6.9.2`] - Comes with `devpi-server` 6.9.2, `devpi-web` 4.2.1 and
+  `devpi-client` 6.0.5.
 - [`6.9.1`] - Comes with `devpi-server` 6.9.1, `devpi-web` 4.2.1 and
   `devpi-client` 6.0.5.
 - [`6.9.0`] - Comes with `devpi-server` 6.9.0, `devpi-web` 4.2.0 and
   `devpi-client` 6.0.4.
 
-[`6`, `6.10`, `6.10.0`, `latest`]: https://github.com/coatl-dev/docker-devpi/blob/6.10.0/Dockerfile
+[`6`, `6.11`, `6.11.0`, `latest`]: https://github.com/coatl-dev/docker-devpi/blob/6.11.0/Dockerfile
+[`6.10`, `6.10.0`]: https://github.com/coatl-dev/docker-devpi/blob/6.10.0/Dockerfile
 [`6.9`, `6.9.2`]: https://github.com/coatl-dev/docker-devpi/blob/6.9.2/Dockerfile
 [`6.9.1`]: https://github.com/coatl-dev/docker-devpi/blob/6.9.1/Dockerfile
 [`6.9.0`]: https://github.com/coatl-dev/docker-devpi/blob/6.9.0/Dockerfile
