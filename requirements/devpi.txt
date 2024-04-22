@@ -291,26 +291,26 @@ defusedxml==0.7.1 \
     # via
     #   devpi-server
     #   devpi-web
-devpi-client==7.0.2 \
-    --hash=sha256:a0e5f967c59780d258b205ea1c4d82b177439c0dd798317a6b10f50f7d7c6cf4 \
-    --hash=sha256:fb63fd088dce1ddd7cbe9879f6cc95bf464eb3d48cbdf51fc9c7bdef5e4d1ba0
+devpi-client==7.0.3 \
+    --hash=sha256:3090788aa5bffe3d35f5f8e5789eab77c28b211b4982b1c2b4b744fdb3f64e0b \
+    --hash=sha256:e5a17a10816785fcb00de01f59237e79952968ee9d88f08fe501d3d7563f2102
     # via -r devpi.in
-devpi-common==4.0.3 \
-    --hash=sha256:d96be2e842fa76d7c67c185ec037e80e250b323271edaa716ccb31eecd0d73eb \
-    --hash=sha256:f8e01b4f6df080f62284cce58c5bb1ce1e869b0c234aac7ad135609745fc173d
+devpi-common==4.0.4 \
+    --hash=sha256:235a0a9a45c96e54c60ba6ba2f77d856cf90f1a69c1bee949887e9edc03a41cc \
+    --hash=sha256:8a83b788ac821ade1e348d571db083575c5c5d92ba0932a3a8f75c6f8dde4d88
     # via
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.10.0 \
-    --hash=sha256:81f0940f9a3a0524e41a7ef45632305f56a4daf41f0f1a336ac7352b8e35a5c9 \
-    --hash=sha256:fd65682a6172b8cf4dab2841857e7c9d848bd52adf066c3df6cef6ecc57cd278
+devpi-server==6.11.0 \
+    --hash=sha256:bb7f797a88b43838cc37afd91062e43a0e2f49c809241134e321e82b86613480 \
+    --hash=sha256:e8e32d1f1978e85843b29dc9a8c4446a054287ef2b90fa25f4fb3d8978be9c76
     # via
     #   -r devpi.in
     #   devpi-web
-devpi-web==4.2.1 \
-    --hash=sha256:4787012821355fecd51244741f6cd188f5c965b7f845cb21eaf87e2ff0536b80 \
-    --hash=sha256:aefa99440f31a101cb3ecc38906cd49db1facd9c425d1c1263f4d032d604b039
+devpi-web==4.2.2 \
+    --hash=sha256:6f18d9899b283cb64759b04fa15e7b207c19c140ad96af8c359e66cfd5ac57c4 \
+    --hash=sha256:ef94e217ef18dc5df1b076419defdf306d9f0366de66a5ab5376cc7aa4d7c360
     # via -r devpi.in
 docutils==0.21.1 \
     --hash=sha256:14c8d34a55b46c88f9f714adb29cefbdd69fb82f3fef825e59c5faab935390d8 \
@@ -345,9 +345,9 @@ iniconfig==2.0.0 \
     --hash=sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3 \
     --hash=sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374
     # via devpi-client
-itsdangerous==2.1.2 \
-    --hash=sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44 \
-    --hash=sha256:5dbbc68b317e5e42f327f9021763545dc3fc3bfe22e6deb96aaf1fc38874156a
+itsdangerous==2.2.0 \
+    --hash=sha256:c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef \
+    --hash=sha256:e0050c0b7da1eea53ffaf149c0cfbb5c6e2e2b69c4bef22c81fa6eb73e5f6173
     # via devpi-server
 lazy==1.6 \
     --hash=sha256:449375c125c7acac6b7a93f71b8e7ccb06546c37b161613f92d2d3981f793244 \
@@ -378,7 +378,11 @@ packaging==24.0 \
     --hash=sha256:eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9
     # via
     #   build
-    #   devpi-common
+    #   packaging-legacy
+packaging-legacy==23.0.post0 \
+    --hash=sha256:6cd21cd283c09409349bccc10bb55bfd837b4aab86a7b0f87bfcb8dd9831a8a3 \
+    --hash=sha256:c974a42291a77112313f0198b87ad96e07a3c357295d572560a4b9c368f7d9db
+    # via devpi-common
 passlib[argon2]==1.7.4 \
     --hash=sha256:aa6bca462b8d8bda89c70b382f0c298a20b5560af6cbfa2dce410c0a2fb669f1 \
     --hash=sha256:defd50f72b65c5402ab2c573830a6978e5f202ad0d984793c8dde2c4152ebe04
@@ -407,9 +411,9 @@ platformdirs==4.2.0 \
     # via
     #   devpi-client
     #   devpi-server
-pluggy==1.4.0 \
-    --hash=sha256:7db9f7b503d67d1c5b95f59773ebb58a8c1c288129a88665838012cfb07b8981 \
-    --hash=sha256:8c85c2876142a764e5b7548e7d9a0e0ddb46f5185161049a79b7e974454223be
+pluggy==1.5.0 \
+    --hash=sha256:2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1 \
+    --hash=sha256:44e1ad92c8ca002de6377e165f3e0f1be63266ab4d554740532335b9d75ea669
     # via
     #   devpi-client
     #   devpi-server
