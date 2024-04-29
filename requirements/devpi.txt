@@ -312,9 +312,9 @@ devpi-web==4.2.2 \
     --hash=sha256:6f18d9899b283cb64759b04fa15e7b207c19c140ad96af8c359e66cfd5ac57c4 \
     --hash=sha256:ef94e217ef18dc5df1b076419defdf306d9f0366de66a5ab5376cc7aa4d7c360
     # via -r devpi.in
-docutils==0.21.1 \
-    --hash=sha256:14c8d34a55b46c88f9f714adb29cefbdd69fb82f3fef825e59c5faab935390d8 \
-    --hash=sha256:65249d8a5345bc95e0f40f280ba63c98eb24de35c6c8f5b662e3e8948adea83f
+docutils==0.21.2 \
+    --hash=sha256:3a6b18732edf182daa3cd12775bbb338cf5691468f91eeeb109deff6ebfa986f \
+    --hash=sha256:dafca5b9e384f0e419294eb4d2ff9fa826435bf15f15b7bd45723e8ad76811b2
     # via
     #   devpi-web
     #   readme-renderer
@@ -405,9 +405,9 @@ plaster-pastedeploy==1.0.1 \
     --hash=sha256:ad3550cc744648969ed3b810f33c9344f515ee8d8a8cec18e8f2c4a643c2181f \
     --hash=sha256:be262e6d2e41a7264875daa2fe2850cbb0615728bcdc92828fdc72736e381412
     # via pyramid
-platformdirs==4.2.0 \
-    --hash=sha256:0614df2a2f37e1a662acbd8e2b25b92ccf8632929bc6d43467e17fe89c75e068 \
-    --hash=sha256:ef0cc731df711022c174543cb70a9b5bd22e5a9337c8624ef2c2ceb8ddad8768
+platformdirs==4.2.1 \
+    --hash=sha256:031cd18d4ec63ec53e82dceaac0417d218a6863f7745dfcc9efe7793b7039bdf \
+    --hash=sha256:17d5a1161b3fd67b390023cb2d3b026bbd40abde6fdb052dfbd3a29c3ba22ee1
     # via
     #   devpi-client
     #   devpi-server
@@ -431,9 +431,9 @@ pygments==2.17.2 \
     # via
     #   devpi-web
     #   readme-renderer
-pyproject-hooks==1.0.0 \
-    --hash=sha256:283c11acd6b928d2f6a7c73fa0d01cb2bdc5f07c57a2eeb6e83d5e56b97976f8 \
-    --hash=sha256:f271b298b97f5955d53fb12b72c1fb1948c22c1a6b70b315c54cedaca0264ef5
+pyproject-hooks==1.1.0 \
+    --hash=sha256:4b37730834edbd6bd37f26ece6b44802fb1c1ee2ece0e54ddff8bfc06db86965 \
+    --hash=sha256:7ceeefe9aec63a1064c18d939bdc3adf2d8aa1988a510afec15151578b232aa2
     # via build
 pyramid==2.0.2 \
     --hash=sha256:2e6585ac55c147f0a51bc00dadf72075b3bdd9a871b332ff9e5e04117ccd76fa \
