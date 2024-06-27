@@ -44,7 +44,7 @@ RUN set -eux; \
     python -m virtualenv ${VIRTUAL_ENV}
 
 # Prepend virtualenv to PATH
-ENV PATH ${VIRTUAL_ENV}/bin:${PATH}
+ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
 
 # Install devpi
 RUN set -eux; \
