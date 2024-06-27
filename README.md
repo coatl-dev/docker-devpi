@@ -19,6 +19,21 @@ using [`python:3.12-slim`].
 - [`6.9.0`] - Comes with `devpi-server` 6.9.0, `devpi-web` 4.2.0 and
   `devpi-client` 6.0.4.
 
+## How to use this image
+
+To run locally:
+
+```bash
+docker run \
+  --name devpi-server \
+  --detach \
+  --publish 3141:3141 \
+  --volume /tmp/devpi:/devpi \
+  --env DEVPI_PASSWORD=password \
+  coatldev/devpi:6.11.0
+```
+
+
 [`6`, `6.11`, `6.11.0`, `latest`]: https://github.com/coatl-dev/docker-devpi/blob/6.11.0/Dockerfile
 [`6.10`, `6.10.0`]: https://github.com/coatl-dev/docker-devpi/blob/6.10.0/Dockerfile
 [`6.9`, `6.9.2`]: https://github.com/coatl-dev/docker-devpi/blob/6.9.2/Dockerfile
