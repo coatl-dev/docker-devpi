@@ -4,8 +4,8 @@ set -euo pipefail
 IFS=$'\n\t'
 
 function defaults {
-    : "${DEVPISERVER_SERVERDIR='/data/server'}"
-    : "${DEVPI_CLIENTDIR='/data/client'}"
+    : "${DEVPISERVER_SERVERDIR=/data/server}"
+    : "${DEVPI_CLIENTDIR=/data/client}"
 
     echo "ENTRYPOINT: DEVPISERVER_SERVERDIR is ${DEVPISERVER_SERVERDIR}"
     echo "ENTRYPOINT: DEVPI_CLIENTDIR is ${DEVPI_CLIENTDIR}"
