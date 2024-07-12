@@ -1,8 +1,12 @@
-## 6.12.0 (2024-06-27)
+## 6.12.0 (2024-07-12)
 
 ### Feat
 
 - bump devpi-server from 6.11.0 to 6.12.0 (#106)
+
+### Fix
+
+- default server and client dir paths (#110)
 
 ## 6.11.0 (2024-04-22)
 
