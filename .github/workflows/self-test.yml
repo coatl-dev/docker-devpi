@@ -23,7 +23,7 @@ jobs:
 
       - name: Run container
         run: |
-          docker run docker run \
+          docker run \
             --name devpi-server \
             --detach \
             --publish 3141:3141 \
