@@ -48,6 +48,7 @@ jobs:
         type=raw,value=${{ needs.semver.outputs.version }}
         type=raw,value=${{ needs.semver.outputs.major_minor }}
         type=raw,value=${{ needs.semver.outputs.major }}
+        type=raw,value=latest,enable={{is_default_branch}}
       dockerhub-username: ${{ vars.DOCKERHUB_USERNAME }}
     secrets:
       dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
