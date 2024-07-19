@@ -41,13 +41,6 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Cache Python
-        id: cache-python
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.setup-python.outputs.python-path }}
-          key: py-${{ steps.setup-python.outputs.python-version }}-${{ runner.os }}-${{ hashFiles('requirements/test.txt') }}
-
       - name: Install requirements
         run: |
           python -m pip install --requirement requirements/test.txt
