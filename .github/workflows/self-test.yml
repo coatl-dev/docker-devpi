@@ -53,11 +53,17 @@ jobs:
           python -m pip install --requirement requirements/test.txt
 
       - name: Create the stub package importable directory
-        run: mkdir -pv src/test_package
+        run: |
+          mkdir -pv src/test_package
+
       - name: Populate the stub package `__init__.py`
-        run: echo '__version__ = "0.1"' > src/test_package/__init__.py
+        run: |
+          echo '__version__ = "0.1"' > src/test_package/__init__.py
+
       - name: Populate the stub package `README.md`
-        run: echo "# Test Package" > README.md
+        run: |
+          echo "# Test Package" > README.md
+
       - name: Populate the stub package `pyproject.toml`
         run: echo "$CONTENTS" > pyproject.toml
         env:
