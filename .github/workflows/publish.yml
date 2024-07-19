@@ -43,7 +43,7 @@ jobs:
     needs: semver
     uses: coatl-dev/workflows/.github/workflows/docker-publish-multi-platform.yml@v4
     with:
-      registry-image: coatldev/six
+      registry-image: coatldev/devpi
       metadata-tags: |
         type=raw,value=${{ needs.semver.outputs.version }}
         type=raw,value=${{ needs.semver.outputs.major_minor }}
