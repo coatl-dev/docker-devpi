@@ -79,7 +79,6 @@ jobs:
 
       - name: Upload package
         run: |
-          python -m twine register dist/*.tar.gz
           python -m twine upload --verbose dist/*
         env:
           TWINE_USERNAME: ${{ env.devpi-username }}
