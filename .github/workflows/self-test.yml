@@ -1,0 +1,86 @@
+name: self-test
+
+on:
+  pull_request:
+    branches:
+      - coatl
+    paths:
+      - '.github/workflows/self-test.yml'
+      - 'requirements/**'
+      - 'Dockerfile'
+
+env:
+  devpi-password: abcd1234
+  devpi-username: root
+  devpi-port: 3141
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build container
+        run: |
+          docker build -t devpi .
+
+      - name: Run container
+        run: |
+          docker run \
+            --name devpi-server \
+            --detach \
+            --publish 3141:3141 \
+            --env DEVPI_PASSWORD=${{ env.devpi-password }} \
+            devpi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        id: setup-python
+        with:
+          python-version: '3.12'
+
+      - name: Cache Python
+        id: cache-python
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.setup-python.outputs.python-path }}
+          key: py-${{ steps.setup-python.outputs.python-version }}-${{ runner.os }}-${{ hashFiles('requirements/test.txt') }}
+
+      - name: Install requirements
+        run: |
+          python -m pip install --requirement requirements/test.txt
+
+      - name: Create the stub package importable directory
+        run: mkdir -pv src/test_package
+      - name: Populate the stub package `__init__.py`
+        run: echo '__version__ = "0.1"' > src/test_package/__init__.py
+      - name: Populate the stub package `README.md`
+        run: echo "# Test Package" > README.md
+      - name: Populate the stub package `pyproject.toml`
+        run: echo "$CONTENTS" > pyproject.toml
+        env:
+          CONTENTS: |
+            [build-system]
+            build-backend = "setuptools.build_meta"
+            requires = [
+              "setuptools>=61.2",
+            ]
+
+            [project]
+            name = "test-package"
+            version = "0.1"
+            readme = "README.md"
+
+      - name: Build the stub package
+        run: |
+          python -m build
+
+      - name: Upload package
+        run: |
+          python -m twine upload --verbose dist/*
+        env:
+          TWINE_USERNAME: ${{ env.devpi-username }}
+          TWINE_PASSWORD: ${{ env.devpi-password }}
+          TWINE_REPOSITORY_URL: http://localhost:${{ env.devpi-port }}/${{ env.devpi-username }}/public/

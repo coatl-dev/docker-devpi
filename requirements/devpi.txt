@@ -291,9 +291,9 @@ defusedxml==0.7.1 \
     # via
     #   devpi-server
     #   devpi-web
-devpi-client==7.0.3 \
-    --hash=sha256:3090788aa5bffe3d35f5f8e5789eab77c28b211b4982b1c2b4b744fdb3f64e0b \
-    --hash=sha256:e5a17a10816785fcb00de01f59237e79952968ee9d88f08fe501d3d7563f2102
+devpi-client==7.1.0 \
+    --hash=sha256:3706e1ae88f13894a90ef324d0c6c01826e3992f33da0d729d6eb3ce056fcbf3 \
+    --hash=sha256:d65a16277b5a7bb47ce04b2e902f8eab6e043d975d2e8345fe40fa3a55e6b1af
     # via -r devpi.in
 devpi-common==4.0.4 \
     --hash=sha256:235a0a9a45c96e54c60ba6ba2f77d856cf90f1a69c1bee949887e9edc03a41cc \
@@ -604,9 +604,9 @@ zope-interface==6.4.post2 \
     # via pyramid
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==70.3.0 \
-    --hash=sha256:f171bab1dfbc86b132997f26a119f6056a57950d058587841a0082e8830f9dc5 \
-    --hash=sha256:fe384da74336c398e0d956d1cae0669bc02eed936cdb1d49b57de1990dc11ffc
+setuptools==71.0.3 \
+    --hash=sha256:3d8531791a27056f4a38cd3e54084d8b1c4228ff9cf3f2d7dd075ec99f9fd70d \
+    --hash=sha256:f501b6e6db709818dc76882582d9c516bf3b67b948864c5fa1d1624c09a49207
     # via
     #   check-manifest
     #   pyramid

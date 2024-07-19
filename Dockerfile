@@ -32,16 +32,16 @@ RUN set -eux; \
 # Copy requirements
 COPY requirements /tmp/requirements/
 
-# Install virtualenv
+# Install base deps
 RUN set -eux; \
     \
     python -m pip install \
-        --requirement /tmp/requirements/virtualenv.txt
+        --requirement /tmp/requirements/base.txt
 
 # Create virtualenv
 RUN set -eux; \
     \
-    python -m virtualenv ${VIRTUAL_ENV}
+    python -m venv --upgrade-deps ${VIRTUAL_ENV}
 
 # Prepend virtualenv to PATH
 ENV PATH=${VIRTUAL_ENV}/bin:${PATH}

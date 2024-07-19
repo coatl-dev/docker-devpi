@@ -1,45 +1,53 @@
 name: publish
 
 on:
-  release:
-    types:
-      - published
+  push:
+    branches:
+      - 'coatl'
+    paths:
+      - '.github/workflows/publish.yml'
+      - 'Dockerfile'
+  schedule:
+    - cron: '30 20 * * 1,5'
 
 jobs:
-  build:
+  semver:
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.tags.outputs.version }}
+      major_minor: ${{ steps.tags.outputs.major_minor }}
+      major: ${{ steps.tags.outputs.major }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            coatldev/devpi
-          tags: |
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
+      - name: Extract version number
+        id: tags
+        run: |
+          # Extract the Python version from the Dockerfile
+          VERSION=$(grep -oP 'devpi-server==\K[0-9]+\.[0-9]+\.[0-9]+' requirements/devpi.txt)
+          echo "VERSION=${VERSION}"
+          # Trim the version to the first two segments (major.minor)
+          MAJOR_MINOR=$(echo "$VERSION" | grep -oP '[0-9]+\.[0-9]+')
+          echo "MAJOR_MINOR=${MAJOR_MINOR}"
+          # Trim the version to the first segment (major)
+          MAJOR=$(echo "$MAJOR_MINOR" | grep -oP '^[0-9]+')
+          echo "MAJOR=${MAJOR}"
+          # Export the extracted version to GITHUB_OUTPUT
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "major_minor=${MAJOR_MINOR}" >> $GITHUB_OUTPUT
+          echo "major=${MAJOR}" >> $GITHUB_OUTPUT
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build and push
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          platforms: |
-            linux/amd64
-            linux/arm64
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+  publish:
+    needs: semver
+    uses: coatl-dev/workflows/.github/workflows/docker-publish-multi-platform.yml@v4
+    with:
+      registry-image: coatldev/six
+      metadata-tags: |
+        type=raw,value=${{ needs.semver.outputs.version }}
+        type=raw,value=${{ needs.semver.outputs.major_minor }}
+        type=raw,value=${{ needs.semver.outputs.major }}
+      dockerhub-username: ${{ vars.DOCKERHUB_USERNAME }}
+    secrets:
+      dockerhub-token: ${{ secrets.DOCKERHUB_TOKEN }}
