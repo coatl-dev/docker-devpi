@@ -41,23 +41,22 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Cache Python
-        id: cache-python
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.setup-python.outputs.python-path }}
-          key: py-${{ steps.setup-python.outputs.python-version }}-${{ runner.os }}-${{ hashFiles('requirements/test.txt') }}
-
       - name: Install requirements
         run: |
           python -m pip install --requirement requirements/test.txt
 
       - name: Create the stub package importable directory
-        run: mkdir -pv src/test_package
+        run: |
+          mkdir -pv src/test_package
+
       - name: Populate the stub package `__init__.py`
-        run: echo '__version__ = "0.1"' > src/test_package/__init__.py
+        run: |
+          echo '__version__ = "0.1"' > src/test_package/__init__.py
+
       - name: Populate the stub package `README.md`
-        run: echo "# Test Package" > README.md
+        run: |
+          echo "# Test Package" > README.md
+
       - name: Populate the stub package `pyproject.toml`
         run: echo "$CONTENTS" > pyproject.toml
         env:
@@ -76,6 +75,10 @@ jobs:
       - name: Build the stub package
         run: |
           python -m build
+
+      - name: Sleep
+        run: |
+          sleep 60
 
       - name: Upload package
         run: |
