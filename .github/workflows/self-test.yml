@@ -76,6 +76,10 @@ jobs:
         run: |
           python -m build
 
+      - name: Sleep
+        run: |
+          sleep 60
+
       - name: Upload package
         run: |
           python -m twine upload --verbose dist/*
