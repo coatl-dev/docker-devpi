@@ -18,7 +18,7 @@ docutils==0.21.2
     # via readme-renderer
 idna==3.7
     # via requests
-importlib-metadata==8.0.0
+importlib-metadata==8.2.0
     # via twine
 jaraco-classes==3.4.0
     # via keyring

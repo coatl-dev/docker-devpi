@@ -302,9 +302,9 @@ devpi-common==4.0.4 \
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.12.0 \
-    --hash=sha256:31e916f06562d6c29edb926e01a94800666afe6333a84c95c8e11285549212d1 \
-    --hash=sha256:c4a74cad8bb45c0a4f097ec22b0575265121b531747aaa72a1d5a0b471a60dab
+devpi-server==6.12.1 \
+    --hash=sha256:1bf0859784441a902ec264754569ffb78fcac2250a923ba03948dd64b5f05283 \
+    --hash=sha256:72bb14b545b2dda6f1b279da3885475b0eb3a763152442abcd41ce39219310c5
     # via
     #   -r devpi.in
     #   devpi-web
