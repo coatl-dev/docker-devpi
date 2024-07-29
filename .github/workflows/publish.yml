@@ -11,9 +11,6 @@ on:
   schedule:
     - cron: '30 20 * * 1,5'
 
-env:
-  REGISTRY_IMAGE: coatldev/devpi
-
 jobs:
   tagger:
     runs-on: ubuntu-latest
@@ -81,15 +78,15 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.version }}
-            ${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major_minor }}
-            ${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major }}
-            ${{ env.REGISTRY_IMAGE }}:latest
-            ghcr.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.version }}
-            ghcr.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major_minor }}
-            ghcr.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major }}
-            ghcr.io/${{ env.REGISTRY_IMAGE }}:latest
-            quay.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.version }}
-            quay.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major_minor }}
-            quay.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major }}
-            quay.io/${{ env.REGISTRY_IMAGE }}:latest
+            coatldev/devpi:${{ needs.tagger.outputs.version }}
+            coatldev/devpi:${{ needs.tagger.outputs.major_minor }}
+            coatldev/devpi:${{ needs.tagger.outputs.major }}
+            coatldev/devpi:latest
+            ghcr.io/coatl-dev/devpi:${{ needs.tagger.outputs.version }}
+            ghcr.io/coatl-dev/devpi:${{ needs.tagger.outputs.major_minor }}
+            ghcr.io/coatl-dev/devpi:${{ needs.tagger.outputs.major }}
+            ghcr.io/coatl-dev/devpi:latest
+            quay.io/coatldev/devpi:${{ needs.tagger.outputs.version }}
+            quay.io/coatldev/devpi:${{ needs.tagger.outputs.major_minor }}
+            quay.io/coatldev/devpi:${{ needs.tagger.outputs.major }}
+            quay.io/coatldev/devpi:latest
