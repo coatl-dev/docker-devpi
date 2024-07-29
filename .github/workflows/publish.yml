@@ -45,6 +45,9 @@ jobs:
 
   build:
     needs: tagger
+    permissions:
+      contents: read
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
@@ -58,6 +61,12 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Log in to Quay
         uses: docker/login-action@v3
@@ -78,6 +87,10 @@ jobs:
             ${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major_minor }}
             ${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major }}
             ${{ env.REGISTRY_IMAGE }}:latest
+            ghcr.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.version }}
+            ghcr.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major_minor }}
+            ghcr.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major }}
+            ghcr.io/${{ env.REGISTRY_IMAGE }}:latest
             quay.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.version }}
             quay.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major_minor }}
             quay.io/${{ env.REGISTRY_IMAGE }}:${{ needs.tagger.outputs.major }}
