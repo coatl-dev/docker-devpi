@@ -17,6 +17,7 @@ ENV VIRTUAL_ENV=/env
 RUN set -eux; \
     \
     apt-get update --quiet; \
+    apt-get upgrade --yes; \
     apt-get install --yes --no-install-recommends \
         procps \
     ; \
