@@ -1,8 +1,9 @@
 # docker-devpi
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/coatl-dev/docker-devpi/coatl.svg)](https://results.pre-commit.ci/latest/github/coatl-dev/docker-devpi/coatl)
-![Docker Pulls](https://img.shields.io/docker/pulls/coatldev/devpi)
-[![Docker Repository on Quay](https://quay.io/repository/coatldev/devpi/status "Docker Repository on Quay")](https://quay.io/repository/coatldev/devpi)
+[![Docker Repository on Docker Hub](https://img.shields.io/badge/hub.docker.com-white?logo=docker "Docker Repository on Docker Hub")](https://hub.docker.com/r/coatldev/devpi)
+[![Docker Repository on GitHub Container Registry](https://img.shields.io/badge/ghcr.io-black?logo=github "Docker Repository on GitHub Container Registry")](https://github.com/coatl-dev/docker-devpi/pkgs/container/devpi)
+[![Docker Repository on Quay](https://img.shields.io/badge/quay.io-red?logo=red-hat "Docker Repository on Quay")](https://quay.io/repository/coatldev/devpi)
 
 Docker image with `devpi-client`, `devpi-server` and `devpi-web` pre-installed
 using [`python:3.12-slim`].
