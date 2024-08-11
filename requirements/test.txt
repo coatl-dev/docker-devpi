@@ -8,7 +8,7 @@ build==1.2.1
     # via -r test.in
 certifi==2024.7.4
     # via requests
-cffi==1.16.0
+cffi==1.17.0
     # via cryptography
 charset-normalizer==3.3.2
     # via requests
@@ -36,7 +36,7 @@ markdown-it-py==3.0.0
     # via rich
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==10.3.0
+more-itertools==10.4.0
     # via
     #   jaraco-classes
     #   jaraco-functools
@@ -74,5 +74,5 @@ urllib3==2.2.2
     # via
     #   requests
     #   twine
-zipp==3.19.2
+zipp==3.20.0
     # via importlib-metadata
