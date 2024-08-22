@@ -36,5 +36,4 @@ docker run \
   quay.io/coatldev/devpi:latest
 ```
 
-[click here]: https://hub.docker.com/repository/docker/coatldev/devpi/tags
 [`python:3.12-slim`]: https://github.com/docker-library/python/blob/HEAD/3.12/slim-bookworm/Dockerfile
