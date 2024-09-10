@@ -11,7 +11,6 @@ jobs:
     with:
       path: requirements
       python-version: '3.12'
-      pr-delete-branch: 'no'
     secrets:
       gh-token: ${{ secrets.COATL_BOT_GH_TOKEN }}
       gpg-sign-passphrase: ${{ secrets.COATL_BOT_GPG_PASSPHRASE }}
