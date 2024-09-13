@@ -18,7 +18,7 @@ docutils==0.21.2
     # via readme-renderer
 idna==3.8
     # via requests
-importlib-metadata==8.4.0
+importlib-metadata==8.5.0
     # via twine
 jaraco-classes==3.4.0
     # via keyring
@@ -64,15 +64,15 @@ requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.8.0
+rich==13.8.1
     # via twine
 secretstorage==3.3.3
     # via keyring
 twine==5.1.1
     # via -r test.in
-urllib3==2.2.2
+urllib3==2.2.3
     # via
     #   requests
     #   twine
-zipp==3.20.1
+zipp==3.20.2
     # via importlib-metadata
