@@ -4,9 +4,9 @@
 #
 #    pip-compile --allow-unsafe --generate-hashes devpi.in
 #
-anyio==4.4.0 \
-    --hash=sha256:5aadc6a1bbb7cdb0bede386cac5e2940f5e2ff3aa20277e991cf028e0585ce94 \
-    --hash=sha256:c1b2d8f46a8a812513012e1107cb0e68c17159a7a594208005a57dc776e1bdc7
+anyio==4.5.0 \
+    --hash=sha256:c5a275fe5ca0afd788001f58fca1e69e29ce706d746e317d660e21f70c530ef9 \
+    --hash=sha256:fdeb095b7cc5a5563175eedd926ec4ae55413bb4be5770c424af0ba46ccb4a78
     # via httpx
 argon2-cffi==23.1.0 \
     --hash=sha256:879c3e79a2729ce768ebb7d36d4609e3a78a4ca2ec3a9f12286ca057e3d0db08 \
@@ -317,15 +317,15 @@ devpi-common==4.0.4 \
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.12.1 \
-    --hash=sha256:1bf0859784441a902ec264754569ffb78fcac2250a923ba03948dd64b5f05283 \
-    --hash=sha256:72bb14b545b2dda6f1b279da3885475b0eb3a763152442abcd41ce39219310c5
+devpi-server==6.13.0 \
+    --hash=sha256:4301e2c52747866138080570a9140f96fe91ae5678a54ee7de025ab4eaeb7836 \
+    --hash=sha256:fb06bed9b4a40b950683df501e72444f4f4e8d8345e390482e7781017bfa79ff
     # via
     #   -r devpi.in
     #   devpi-web
-devpi-web==4.2.2 \
-    --hash=sha256:6f18d9899b283cb64759b04fa15e7b207c19c140ad96af8c359e66cfd5ac57c4 \
-    --hash=sha256:ef94e217ef18dc5df1b076419defdf306d9f0366de66a5ab5376cc7aa4d7c360
+devpi-web==4.2.3 \
+    --hash=sha256:ca7aa74b511f364314ad29b92ffcf15c28a1579281e3c3dee17f0d365cfaaeb3 \
+    --hash=sha256:db0e0a90525551f4ea650181b93a500deeab295bcfad1b3cc626265cb0c27232
     # via -r devpi.in
 docutils==0.21.2 \
     --hash=sha256:3a6b18732edf182daa3cd12775bbb338cf5691468f91eeeb109deff6ebfa986f \
@@ -420,9 +420,9 @@ plaster-pastedeploy==1.0.1 \
     --hash=sha256:ad3550cc744648969ed3b810f33c9344f515ee8d8a8cec18e8f2c4a643c2181f \
     --hash=sha256:be262e6d2e41a7264875daa2fe2850cbb0615728bcdc92828fdc72736e381412
     # via pyramid
-platformdirs==4.3.3 \
-    --hash=sha256:50a5450e2e84f44539718293cbb1da0a0885c9d14adf21b77bae4e66fc99d9b5 \
-    --hash=sha256:d4e0b7d8ec176b341fb03cb11ca12d0276faa8c485f9cd218f613840463fc2c0
+platformdirs==4.3.6 \
+    --hash=sha256:357fb2acbc885b0419afd3ce3ed34564c13c9b95c89360cd9563f73aa5e2b907 \
+    --hash=sha256:73e575e1408ab8103900836b97580d5307456908a03e92031bab39e4554cc3fb
     # via
     #   devpi-client
     #   devpi-server
@@ -435,7 +435,9 @@ pluggy==1.5.0 \
 py==1.11.0 \
     --hash=sha256:51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719 \
     --hash=sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378
-    # via devpi-server
+    # via
+    #   devpi-server
+    #   devpi-web
 pycparser==2.22 \
     --hash=sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6 \
     --hash=sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc
