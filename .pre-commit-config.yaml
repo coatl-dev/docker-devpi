@@ -9,7 +9,7 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.2
+    rev: 0.29.3
     hooks:
     - id: check-github-workflows
   - repo: https://github.com/shellcheck-py/shellcheck-py
@@ -17,6 +17,6 @@ repos:
     hooks:
       - id: shellcheck
   - repo: https://github.com/coatl-dev/hadolint-coatl
-    rev: 2.12.0.3
+    rev: 2.12.1b0
     hooks:
       - id: hadolint
