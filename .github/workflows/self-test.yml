@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-python@v5
         id: setup-python
         with:
-          python-version: '3.12'
+          python-version: '3.13'
 
       - name: Install requirements
         run: |
@@ -78,7 +78,7 @@ jobs:
 
       - name: Sleep
         run: |
-          sleep 60
+          sleep 30
 
       - name: Upload package
         run: |

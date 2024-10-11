@@ -6,7 +6,7 @@
 [![Docker Repository on Quay](https://img.shields.io/badge/quay.io-red?logo=red-hat "Docker Repository on Quay")](https://quay.io/repository/coatldev/devpi)
 
 Docker image with `devpi-client`, `devpi-server` and `devpi-web` pre-installed
-using [`python:3.12-slim`].
+using [`python:3.13-slim`].
 
 ## How to use this image
 
@@ -36,4 +36,4 @@ docker run \
   quay.io/coatldev/devpi:latest
 ```
 
-[`python:3.12-slim`]: https://github.com/docker-library/python/blob/HEAD/3.12/slim-bookworm/Dockerfile
+[`python:3.13-slim`]: https://github.com/docker-library/python/blob/HEAD/3.13/slim-bookworm/Dockerfile
