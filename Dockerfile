@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.13-slim
 
 LABEL \
   maintainer="César Román <cesar@coatl.dev>" \
@@ -33,12 +33,6 @@ RUN set -eux; \
 # Copy requirements
 COPY requirements /tmp/requirements/
 
-# Install base deps
-RUN set -eux; \
-    \
-    python -m pip install \
-        --requirement /tmp/requirements/base.txt
-
 # Create virtualenv
 RUN set -eux; \
     \
@@ -50,8 +44,17 @@ ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
 # Install devpi
 RUN set -eux; \
     \
+    savedAptMark="$(apt-mark showmanual)"; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends build-essential; \
+    \
     python -m pip install \
-        --requirement /tmp/requirements/devpi.txt
+        --requirement /tmp/requirements/devpi.txt \
+    ; \
+    apt-mark auto '.*' > /dev/null; \
+    [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; \
+    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
+    rm -rf /var/lib/apt/lists/*
 
 EXPOSE 3141
 VOLUME /data
