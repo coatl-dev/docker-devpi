@@ -41,18 +41,18 @@ defusedxml==0.7.1
     # via
     #   devpi-server
     #   devpi-web
-devpi-client==7.1.0
+devpi-client==7.2.0
     # via -r devpi.in
 devpi-common==4.0.4
     # via
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.13.0
+devpi-server==6.14.0
     # via
     #   -r devpi.in
     #   devpi-web
-devpi-web==4.2.3
+devpi-web==4.3.0
     # via -r devpi.in
 docutils==0.21.2
     # via
@@ -166,7 +166,7 @@ zope-interface==7.1.0
     # via pyramid
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==75.1.0
+setuptools==75.2.0
     # via
     #   check-manifest
     #   pyramid
