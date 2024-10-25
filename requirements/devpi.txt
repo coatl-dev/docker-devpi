@@ -80,7 +80,9 @@ lazy==1.6
     #   devpi-common
     #   devpi-server
 legacy-cgi==2.6.1
-    # via devpi-server
+    # via
+    #   devpi-server
+    #   webob
 nh3==0.2.18
     # via readme-renderer
 packaging==24.1
@@ -156,13 +158,13 @@ venusian==3.1.0
     # via pyramid
 waitress==3.0.0
     # via devpi-server
-webob==1.8.8
+webob==1.8.9
     # via pyramid
 whoosh==2.7.4
     # via devpi-web
 zope-deprecation==5.0
     # via pyramid
-zope-interface==7.1.0
+zope-interface==7.1.1
     # via pyramid
 
 # The following packages are considered to be unsafe in a requirements file:
