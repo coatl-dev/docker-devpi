@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM coatldev/python:3.13-slim
 
 LABEL \
   maintainer="César Román <cesar@coatl.dev>" \
