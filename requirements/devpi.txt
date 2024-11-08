@@ -85,7 +85,7 @@ legacy-cgi==2.6.1
     #   webob
 nh3==0.2.18
     # via readme-renderer
-packaging==24.1
+packaging==24.2
     # via
     #   build
     #   packaging-legacy
