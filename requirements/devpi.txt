@@ -60,7 +60,7 @@ docutils==0.21.2
     #   readme-renderer
 h11==0.14.0
     # via httpcore
-httpcore==1.0.6
+httpcore==1.0.7
     # via httpx
 httpx==0.27.2
     # via devpi-server
@@ -168,7 +168,7 @@ zope-interface==7.1.1
     # via pyramid
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==75.4.0
+setuptools==75.5.0
     # via
     #   check-manifest
     #   pyramid
