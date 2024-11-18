@@ -156,7 +156,7 @@ urllib3==2.2.3
     # via requests
 venusian==3.1.0
     # via pyramid
-waitress==3.0.1
+waitress==3.0.2
     # via devpi-server
 webob==1.8.9
     # via pyramid
