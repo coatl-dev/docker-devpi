@@ -35,7 +35,7 @@ charset-normalizer==3.4.0
     # via requests
 check-manifest==0.50
     # via devpi-client
-cmarkgfm==2024.1.14
+cmarkgfm==2024.11.20
     # via readme-renderer
 defusedxml==0.7.1
     # via
@@ -168,7 +168,7 @@ zope-interface==7.1.1
     # via pyramid
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==75.5.0
+setuptools==75.6.0
     # via
     #   check-manifest
     #   pyramid
