@@ -6,10 +6,8 @@ LABEL \
   vendor="coatl.dev"
 
 # Set environment variables
-ENV DEBIAN_FRONTEND=noninteractive
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ENV PIP_INDEX_URL=https://pypi.python.org/simple
-ENV PIP_NO_CACHE_DIR=1
 ENV PIP_TRUSTED_HOST=127.0.0.1
 ENV VIRTUAL_ENV=/env
 
@@ -44,17 +42,8 @@ ENV PATH=${VIRTUAL_ENV}/bin:${PATH}
 # Install devpi
 RUN set -eux; \
     \
-    savedAptMark="$(apt-mark showmanual)"; \
-    apt-get update; \
-    apt-get install -y --no-install-recommends build-essential; \
-    \
     python -m pip install \
-        --requirement /tmp/requirements/devpi.txt \
-    ; \
-    apt-mark auto '.*' > /dev/null; \
-    [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; \
-    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
-    rm -rf /var/lib/apt/lists/*
+        --requirement /tmp/requirements/devpi.txt
 
 EXPOSE 3141
 VOLUME /data
