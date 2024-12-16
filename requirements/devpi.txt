@@ -12,7 +12,7 @@ argon2-cffi==23.1.0
     #   passlib
 argon2-cffi-bindings==21.2.0
     # via argon2-cffi
-attrs==24.2.0
+attrs==24.3.0
     # via devpi-server
 beautifulsoup4==4.12.3
     # via devpi-web
@@ -20,7 +20,7 @@ build==1.2.2.post1
     # via
     #   check-manifest
     #   devpi-client
-certifi==2024.8.30
+certifi==2024.12.14
     # via
     #   httpcore
     #   httpx
