@@ -31,7 +31,7 @@ cffi==1.17.1
     #   cmarkgfm
 chameleon==4.5.4
     # via pyramid-chameleon
-charset-normalizer==3.4.0
+charset-normalizer==3.4.1
     # via requests
 check-manifest==0.50
     # via devpi-client
