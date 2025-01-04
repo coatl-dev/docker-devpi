@@ -63,20 +63,27 @@ jobs:
           username: ${{ vars.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_ROBOT_TOKEN }}
 
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            coatldev/devpi
+            quay.io/coatldev/devpi
+          tags: |
+            ${{ needs.tagger.outputs.version }}
+            ${{ needs.tagger.outputs.major_minor }}
+            ${{ needs.tagger.outputs.major }}
+          flavor: |
+            latest=true
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
           provenance: false
           push: true
-          tags: |
-            coatldev/devpi:${{ needs.tagger.outputs.version }}
-            coatldev/devpi:${{ needs.tagger.outputs.major_minor }}
-            coatldev/devpi:${{ needs.tagger.outputs.major }}
-            coatldev/devpi:latest
-            quay.io/coatldev/devpi:${{ needs.tagger.outputs.version }}
-            quay.io/coatldev/devpi:${{ needs.tagger.outputs.major_minor }}
-            quay.io/coatldev/devpi:${{ needs.tagger.outputs.major }}
-            quay.io/coatldev/devpi:latest
+          tags: ${{ steps.meta.outputs.tags }}
