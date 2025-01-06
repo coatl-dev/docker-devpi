@@ -48,7 +48,7 @@ pkginfo==1.12.0
     # via twine
 pycparser==2.22
     # via cffi
-pygments==2.18.0
+pygments==2.19.1
     # via
     #   readme-renderer
     #   rich
