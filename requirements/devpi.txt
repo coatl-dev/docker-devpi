@@ -4,7 +4,7 @@
 #
 #    pip-compile --allow-unsafe devpi.in
 #
-anyio==4.7.0
+anyio==4.8.0
     # via httpx
 argon2-cffi==23.1.0
     # via
@@ -117,7 +117,7 @@ py==1.11.0
     #   devpi-web
 pycparser==2.22
     # via cffi
-pygments==2.18.0
+pygments==2.19.1
     # via
     #   devpi-web
     #   readme-renderer
@@ -138,7 +138,7 @@ repoze-lru==0.7
     # via devpi-server
 requests==2.32.3
     # via devpi-common
-ruamel-yaml==0.18.8
+ruamel-yaml==0.18.10
     # via devpi-server
 six==1.17.0
     # via python-dateutil
@@ -166,7 +166,7 @@ zope-interface==7.2
     # via pyramid
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==75.6.0
+setuptools==75.7.0
     # via
     #   check-manifest
     #   pyramid
