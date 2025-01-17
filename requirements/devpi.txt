@@ -79,7 +79,7 @@ lazy==1.6
     # via
     #   devpi-common
     #   devpi-server
-legacy-cgi==2.6.1
+legacy-cgi==2.6.2
     # via
     #   devpi-server
     #   webob
@@ -160,7 +160,7 @@ webob==1.8.9
     # via pyramid
 whoosh==2.7.4
     # via devpi-web
-zope-deprecation==5.0
+zope-deprecation==5.1
     # via pyramid
 zope-interface==7.2
     # via pyramid
