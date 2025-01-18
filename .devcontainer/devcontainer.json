@@ -1,0 +1,8 @@
+{
+  "name": "devpi",
+  "image": "coatldev/python:3.13",
+  "containerEnv": {
+    "LC_ALL": "C"
+  },
+  "onCreateCommand": "python -m pip install --upgrade pip-tools"
+}
