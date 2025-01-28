@@ -10,10 +10,6 @@ on:
       - 'Dockerfile'
       - 'entrypoint.sh'
 
-env:
-  DOCKERHUB_REPO: coatldev/devpi
-  QUAY_REPO: quay.io/coatldev/devpi
-
 jobs:
   tagger:
     runs-on: ubuntu-latest
@@ -43,119 +39,18 @@ jobs:
           echo "major=${MAJOR}" >> $GITHUB_OUTPUT
 
   build:
-    runs-on: ${{ matrix.builder.runner-image }}
-    strategy:
-      fail-fast: false
-      matrix:
-        builder:
-          - runner-image: ubuntu-24.04
-            platform: linux/amd64
-          - runner-image: ubuntu-24.04-arm
-            platform: linux/arm64
-    steps:
-      - name: Prepare
-        run: |
-          platform=${{ matrix.builder.platform }}
-          echo "PLATFORM_PAIR=${platform//\//-}" >> $GITHUB_ENV
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ${{ env.DOCKERHUB_REPO }}
-            ${{ env.QUAY_REPO }}
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Login to Quay
-        uses: docker/login-action@v3
-        with:
-          registry: quay.io
-          username: ${{ vars.QUAY_USERNAME }}
-          password: ${{ secrets.QUAY_ROBOT_TOKEN }}
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build and push by digest
-        id: build
-        uses: docker/build-push-action@v6
-        with:
-          platforms: ${{ matrix.builder.platform }}
-          labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=image,"name=${{ env.DOCKERHUB_REPO }},${{ env.QUAY_REPO }}",push-by-digest=true,name-canonical=true,push=true
-
-      - name: Export digest
-        run: |
-          mkdir -p ${{ runner.temp }}/digests
-          digest="${{ steps.build.outputs.digest }}"
-          touch "${{ runner.temp }}/digests/${digest#sha256:}"
-
-      - name: Upload digest
-        uses: actions/upload-artifact@v4
-        with:
-          name: digests-${{ env.PLATFORM_PAIR }}
-          path: ${{ runner.temp }}/digests/*
-          if-no-files-found: error
-          retention-days: 1
-
-  merge:
-    runs-on: ubuntu-latest
-    needs:
-      - tagger
-      - build
-    steps:
-      - name: Download digests
-        uses: actions/download-artifact@v4
-        with:
-          path: ${{ runner.temp }}/digests
-          pattern: digests-*
-          merge-multiple: true
-
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Login to Quay
-        uses: docker/login-action@v3
-        with:
-            registry: quay.io
-            username: ${{ vars.QUAY_USERNAME }}
-            password: ${{ secrets.QUAY_ROBOT_TOKEN }}
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ${{ env.DOCKERHUB_REPO }}
-            ${{ env.QUAY_REPO }}
-          tags: |
-            ${{ needs.tagger.outputs.version }}
-            ${{ needs.tagger.outputs.major_minor }}
-            ${{ needs.tagger.outputs.major }}
-          flavor: |
-            latest=true
-
-      - name: Create manifest list and push
-        working-directory: ${{ runner.temp }}/digests
-        run: |
-          docker buildx imagetools create $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
-            $(printf '${{ env.DOCKERHUB_REPO }}@sha256:%s ' *)
-          docker buildx imagetools create $(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON") \
-            $(printf '${{ env.QUAY_REPO }}@sha256:%s ' *)
-
-      - name: Inspect image
-        run: |
-          docker buildx imagetools inspect ${{ env.DOCKERHUB_REPO }}:${{ steps.meta.outputs.version }}
-          docker buildx imagetools inspect ${{ env.QUAY_REPO }}:${{ steps.meta.outputs.version }}
+    needs: tagger
+    uses: coatl-dev/workflows/.github/workflows/docker-build-push-multi-registry.yml@v4
+    with:
+      dockerhub-repo: coatldev/devpi
+      dockerhub-username: ${{ vars.DOCKERHUB_USERNAME }}
+      quay-repo: quay.io/coatldev/devpi
+      quay-username: ${{ vars.QUAY_USERNAME }}
+      metadata-tags: |
+        ${{ needs.tagger.outputs.version }}
+        ${{ needs.tagger.outputs.major_minor }}
+        ${{ needs.tagger.outputs.major }}
+      latest-tag-flavor: 'true'
+    secrets:
+      dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
+      quay-password: ${{ secrets.QUAY_ROBOT_TOKEN }}
