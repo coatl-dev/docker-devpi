@@ -83,7 +83,7 @@ legacy-cgi==2.6.2
     # via
     #   devpi-server
     #   webob
-nh3==0.2.20
+nh3==0.2.21
     # via readme-renderer
 packaging==24.2
     # via
@@ -168,7 +168,7 @@ zope-interface==7.2
     # via pyramid
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==75.8.0
+setuptools==75.8.2
     # via
     #   check-manifest
     #   pyramid
