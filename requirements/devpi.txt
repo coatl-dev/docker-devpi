@@ -60,7 +60,7 @@ docutils==0.21.2
     #   readme-renderer
 h11==0.14.0
     # via httpcore
-httpcore==1.0.7
+httpcore==1.0.8
     # via httpx
 httpx==0.28.1
     # via devpi-server
@@ -150,9 +150,9 @@ strictyaml==1.7.3
     # via devpi-server
 translationstring==1.4
     # via pyramid
-typing-extensions==4.13.0
+typing-extensions==4.13.2
     # via beautifulsoup4
-urllib3==2.3.0
+urllib3==2.4.0
     # via requests
 venusian==3.1.1
     # via pyramid
