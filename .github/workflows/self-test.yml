@@ -5,9 +5,9 @@ on:
     branches:
       - coatl
     paths:
-      - '.github/workflows/self-test.yml'
-      - 'requirements/**'
-      - 'Dockerfile'
+      - .github/workflows/self-test.yml
+      - requirements/**
+      - Dockerfile
 
 env:
   devpi-password: abcd1234

@@ -3,11 +3,11 @@ name: publish
 on:
   push:
     branches:
-      - 'coatl'
+      - coatl
     paths:
-      - 'requirements/**'
-      - 'Dockerfile'
-      - 'entrypoint.sh'
+      - requirements/**
+      - Dockerfile
+      - entrypoint.sh
 
 jobs:
   tagger:
