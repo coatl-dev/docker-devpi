@@ -31,7 +31,7 @@ cffi==1.17.1
     #   cmarkgfm
 chameleon==4.6.0
     # via pyramid-chameleon
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
 check-manifest==0.50
     # via devpi-client
@@ -103,7 +103,7 @@ plaster==1.1.2
     #   pyramid
 plaster-pastedeploy==1.0.1
     # via pyramid
-platformdirs==4.3.7
+platformdirs==4.3.8
     # via
     #   devpi-client
     #   devpi-server
@@ -168,7 +168,7 @@ zope-interface==7.2
     # via pyramid
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==80.0.0
+setuptools==80.7.0
     # via
     #   check-manifest
     #   pyramid
