@@ -19,7 +19,7 @@ docker run \
   --name devpi-server \
   --detach \
   --publish 3141:3141 \
-  --volume devpi-data:/data
+  --volume devpi-data:/data \
   --env DEVPI_PASSWORD=password \
   coatldev/devpi:latest
 ```
@@ -31,7 +31,7 @@ docker run \
   --name devpi-server \
   --detach \
   --publish 3141:3141 \
-  --volume devpi-data:/data
+  --volume devpi-data:/data \
   --env DEVPI_PASSWORD=password \
   quay.io/coatldev/devpi:latest
 ```
