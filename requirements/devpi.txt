@@ -22,7 +22,7 @@ build==1.2.2.post1
     # via
     #   check-manifest
     #   devpi-client
-certifi==2025.4.26
+certifi==2025.6.15
     # via
     #   httpcore
     #   httpx
@@ -50,11 +50,11 @@ devpi-common==4.1.0
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.15.0
+devpi-server==6.16.0
     # via
     #   -r devpi.in
     #   devpi-web
-devpi-web==5.0.0
+devpi-web==5.0.1
     # via -r devpi.in
 docutils==0.21.2
     # via
@@ -117,7 +117,7 @@ py==1.11.0
     # via devpi-server
 pycparser==2.22
     # via cffi
-pygments==2.19.1
+pygments==2.19.2
     # via
     #   devpi-web
     #   readme-renderer
@@ -154,7 +154,7 @@ translationstring==1.4
     # via pyramid
 typing-extensions==4.14.0
     # via beautifulsoup4
-urllib3==2.4.0
+urllib3==2.5.0
     # via requests
 venusian==3.1.1
     # via pyramid
