@@ -7,10 +7,9 @@ on:
 
 jobs:
   pip-compile-upgrade:
-    uses: coatl-dev/workflows/.github/workflows/pip-compile-upgrade.yml@v5
+    uses: coatl-dev/workflows/.github/workflows/uv-pip-compile-upgrade.yml@v5
     with:
       path: requirements
-      python-version: '3.13'
     secrets:
       gh-token: ${{ secrets.COATL_BOT_GH_TOKEN }}
       gpg-sign-passphrase: ${{ secrets.COATL_BOT_GPG_PASSPHRASE }}
