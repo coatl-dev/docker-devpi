@@ -18,7 +18,7 @@ build==1.2.2.post1
     # via
     #   check-manifest
     #   devpi-client
-certifi==2025.6.15
+certifi==2025.7.14
     # via
     #   httpcore
     #   httpx
@@ -154,7 +154,7 @@ strictyaml==1.7.3
     # via devpi-server
 translationstring==1.4
     # via pyramid
-typing-extensions==4.14.0
+typing-extensions==4.14.1
     # via beautifulsoup4
 urllib3==2.5.0
     # via requests
