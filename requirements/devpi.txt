@@ -81,7 +81,7 @@ legacy-cgi==2.6.3
     # via
     #   devpi-server
     #   webob
-nh3==0.2.21
+nh3==0.3.0
     # via readme-renderer
 packaging==25.0
     # via
