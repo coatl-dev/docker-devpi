@@ -12,7 +12,7 @@ attrs==25.3.0
     # via
     #   devpi-server
     #   devpi-web
-beautifulsoup4==4.13.4
+beautifulsoup4==4.13.5
     # via devpi-web
 build==1.3.0
     # via
@@ -46,7 +46,7 @@ devpi-common==4.1.0
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.16.0
+devpi-server==6.17.0
     # via
     #   -r devpi.in
     #   devpi-web
@@ -101,7 +101,7 @@ plaster==1.1.2
     #   pyramid
 plaster-pastedeploy==1.0.1
     # via pyramid
-platformdirs==4.3.8
+platformdirs==4.4.0
     # via
     #   devpi-client
     #   devpi-server
@@ -132,9 +132,9 @@ readme-renderer==44.0
     # via devpi-web
 repoze-lru==0.7
     # via devpi-server
-requests==2.32.4
+requests==2.32.5
     # via devpi-common
-ruamel-yaml==0.18.14
+ruamel-yaml==0.18.15
     # via devpi-server
 ruamel-yaml-clib==0.2.12
     # via ruamel-yaml
@@ -148,13 +148,13 @@ six==1.17.0
     # via python-dateutil
 sniffio==1.3.1
     # via anyio
-soupsieve==2.7
+soupsieve==2.8
     # via beautifulsoup4
 strictyaml==1.7.3
     # via devpi-server
 translationstring==1.4
     # via pyramid
-typing-extensions==4.14.1
+typing-extensions==4.15.0
     # via beautifulsoup4
 urllib3==2.5.0
     # via requests
