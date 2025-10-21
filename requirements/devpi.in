@@ -1,3 +1,4 @@
+cmarkgfm==2024.11.20
 devpi-client
 devpi-web
 devpi-server
