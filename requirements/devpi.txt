@@ -34,9 +34,7 @@ charset-normalizer==3.4.4
 check-manifest==0.51
     # via devpi-client
 cmarkgfm==2024.11.20
-    # via
-    #   -r devpi.in
-    #   readme-renderer
+    # via readme-renderer
 defusedxml==0.7.1
     # via
     #   devpi-server
