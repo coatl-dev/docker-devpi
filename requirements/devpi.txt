@@ -52,7 +52,7 @@ devpi-server==6.17.0
     #   devpi-web
 devpi-web==5.0.1
     # via -r devpi.in
-docutils==0.22.3
+docutils==0.22.4
     # via
     #   devpi-web
     #   readme-renderer
@@ -134,8 +134,10 @@ repoze-lru==0.7
     # via devpi-server
 requests==2.32.5
     # via devpi-common
-ruamel-yaml==0.18.16
+ruamel-yaml==0.18.17
     # via devpi-server
+ruamel-yaml-clib==0.2.15
+    # via ruamel-yaml
 setuptools==80.9.0
     # via
     #   check-manifest
@@ -143,7 +145,7 @@ setuptools==80.9.0
     #   zope-deprecation
 six==1.17.0
     # via python-dateutil
-soupsieve==2.8
+soupsieve==2.8.1
     # via beautifulsoup4
 strictyaml==1.7.3
     # via devpi-server
