@@ -41,12 +41,12 @@ defusedxml==0.7.1
     #   devpi-web
 devpi-client==7.2.0
     # via -r devpi.in
-devpi-common==4.1.0
+devpi-common==4.1.1
     # via
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.18.0
+devpi-server==6.19.1
     # via
     #   -r devpi.in
     #   devpi-web
@@ -81,7 +81,7 @@ legacy-cgi==2.6.4
     # via
     #   devpi-server
     #   webob
-nh3==0.3.2
+nh3==0.3.3
     # via readme-renderer
 packaging==26.0
     # via
@@ -101,7 +101,7 @@ plaster==1.1.2
     #   pyramid
 plaster-pastedeploy==1.0.1
     # via pyramid
-platformdirs==4.5.1
+platformdirs==4.9.0
     # via
     #   devpi-client
     #   devpi-server
@@ -136,9 +136,10 @@ requests==2.32.5
     # via devpi-common
 ruamel-yaml==0.19.1
     # via devpi-server
-setuptools==80.10.2
+setuptools==81.0.0
     # via
     #   check-manifest
+    #   devpi-server
     #   pyramid
     #   zope-deprecation
 six==1.17.0
