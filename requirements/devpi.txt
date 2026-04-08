@@ -29,7 +29,7 @@ cffi==2.0.0
     #   cmarkgfm
 chameleon==4.6.0
     # via pyramid-chameleon
-charset-normalizer==3.4.6
+charset-normalizer==3.4.7
     # via requests
 check-manifest==0.51
     # via devpi-client
@@ -113,7 +113,7 @@ py==1.11.0
     # via devpi-server
 pycparser==3.0
     # via cffi
-pygments==2.19.2
+pygments==2.20.0
     # via
     #   devpi-web
     #   readme-renderer
@@ -132,7 +132,7 @@ readme-renderer==44.0
     # via devpi-web
 repoze-lru==0.7
     # via devpi-server
-requests==2.33.0
+requests==2.33.1
     # via
     #   devpi-client
     #   devpi-common
