@@ -14,11 +14,11 @@ attrs==26.1.0
     #   devpi-web
 beautifulsoup4==4.14.3
     # via devpi-web
-build==1.4.3
+build==1.4.4
     # via
     #   check-manifest
     #   devpi-client
-certifi==2026.2.25
+certifi==2026.4.22
     # via
     #   httpcore
     #   httpx
@@ -64,7 +64,7 @@ httpx==0.28.1
     # via devpi-server
 hupper==1.12.1
     # via pyramid
-idna==3.11
+idna==3.13
     # via
     #   anyio
     #   httpx
@@ -81,9 +81,9 @@ legacy-cgi==2.6.4
     # via
     #   devpi-server
     #   webob
-nh3==0.3.4
+nh3==0.3.5
     # via readme-renderer
-packaging==26.0
+packaging==26.2
     # via
     #   build
     #   packaging-legacy
@@ -167,5 +167,5 @@ whoosh==2.7.4
     # via devpi-web
 zope-deprecation==6.0
     # via pyramid
-zope-interface==8.3
+zope-interface==8.4
     # via pyramid
