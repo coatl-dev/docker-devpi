@@ -14,7 +14,7 @@ attrs==26.1.0
     #   devpi-web
 beautifulsoup4==4.14.3
     # via devpi-web
-build==1.4.4
+build==1.5.0
     # via
     #   check-manifest
     #   devpi-client
@@ -39,18 +39,18 @@ defusedxml==0.7.1
     # via
     #   devpi-server
     #   devpi-web
-devpi-client==7.2.1
+devpi-client==7.3.0
     # via -r devpi.in
 devpi-common==4.1.1
     # via
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.19.3
+devpi-server==6.20.1
     # via
     #   -r devpi.in
     #   devpi-web
-devpi-web==5.0.2
+devpi-web==5.1.0
     # via -r devpi.in
 docutils==0.22.4
     # via
@@ -64,7 +64,7 @@ httpx==0.28.1
     # via devpi-server
 hupper==1.12.1
     # via pyramid
-idna==3.13
+idna==3.14
     # via
     #   anyio
     #   httpx
@@ -132,7 +132,7 @@ readme-renderer==44.0
     # via devpi-web
 repoze-lru==0.7
     # via devpi-server
-requests==2.33.1
+requests==2.34.0
     # via
     #   devpi-client
     #   devpi-common
@@ -155,7 +155,7 @@ translationstring==1.4
     # via pyramid
 typing-extensions==4.15.0
     # via beautifulsoup4
-urllib3==2.6.3
+urllib3==2.7.0
     # via requests
 venusian==3.1.1
     # via pyramid
