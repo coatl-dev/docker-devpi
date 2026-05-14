@@ -64,7 +64,7 @@ httpx==0.28.1
     # via devpi-server
 hupper==1.12.1
     # via pyramid
-idna==3.14
+idna==3.15
     # via
     #   anyio
     #   httpx
@@ -132,7 +132,7 @@ readme-renderer==44.0
     # via devpi-web
 repoze-lru==0.7
     # via devpi-server
-requests==2.34.0
+requests==2.34.2
     # via
     #   devpi-client
     #   devpi-common
