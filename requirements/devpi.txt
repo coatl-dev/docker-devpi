@@ -18,7 +18,7 @@ build==1.5.0
     # via
     #   check-manifest
     #   devpi-client
-certifi==2026.4.22
+certifi==2026.5.20
     # via
     #   httpcore
     #   httpx
@@ -52,7 +52,7 @@ devpi-server==6.20.1
     #   devpi-web
 devpi-web==5.1.0
     # via -r devpi.in
-docutils==0.22.4
+docutils==0.23
     # via
     #   devpi-web
     #   readme-renderer
@@ -64,7 +64,7 @@ httpx==0.28.1
     # via devpi-server
 hupper==1.12.1
     # via pyramid
-idna==3.15
+idna==3.17
     # via
     #   anyio
     #   httpx
@@ -101,7 +101,7 @@ plaster==1.1.2
     #   pyramid
 plaster-pastedeploy==1.0.1
     # via pyramid
-platformdirs==4.9.6
+platformdirs==4.10.0
     # via
     #   devpi-client
     #   devpi-server
@@ -130,7 +130,7 @@ python-dateutil==2.9.0.post0
     # via strictyaml
 readme-renderer==44.0
     # via devpi-web
-repoze-lru==0.7
+repoze-lru==0.8
     # via devpi-server
 requests==2.34.2
     # via
@@ -147,7 +147,7 @@ setuptools==81.0.0
     #   zope-deprecation
 six==1.17.0
     # via python-dateutil
-soupsieve==2.8.3
+soupsieve==2.8.4
     # via beautifulsoup4
 strictyaml==1.7.3
     # via devpi-server
@@ -167,5 +167,5 @@ whoosh==2.7.4
     # via devpi-web
 zope-deprecation==6.0
     # via pyramid
-zope-interface==8.4
+zope-interface==8.5
     # via pyramid
