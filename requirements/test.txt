@@ -8,13 +8,13 @@ cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.7
     # via requests
-cryptography==48.0.0
+cryptography==49.0.0
     # via secretstorage
 docutils==0.23
     # via readme-renderer
 id==1.6.1
     # via twine
-idna==3.17
+idna==3.18
     # via requests
 jaraco-classes==3.4.0
     # via keyring
@@ -50,7 +50,7 @@ pygments==2.20.0
     #   rich
 pyproject-hooks==1.2.0
     # via build
-readme-renderer==44.0
+readme-renderer==45.0
     # via twine
 requests==2.34.2
     # via

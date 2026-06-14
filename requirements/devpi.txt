@@ -12,7 +12,7 @@ attrs==26.1.0
     # via
     #   devpi-server
     #   devpi-web
-beautifulsoup4==4.14.3
+beautifulsoup4==4.15.0
     # via devpi-web
 build==1.5.0
     # via
@@ -24,16 +24,14 @@ certifi==2026.5.20
     #   httpx
     #   requests
 cffi==2.0.0
-    # via
-    #   argon2-cffi-bindings
-    #   cmarkgfm
+    # via argon2-cffi-bindings
 chameleon==4.6.0
     # via pyramid-chameleon
 charset-normalizer==3.4.7
     # via requests
 check-manifest==0.51
     # via devpi-client
-cmarkgfm==2025.10.22
+comrak==0.0.12
     # via readme-renderer
 defusedxml==0.7.1
     # via
@@ -46,7 +44,7 @@ devpi-common==4.1.1
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.20.1
+devpi-server==6.20.2
     # via
     #   -r devpi.in
     #   devpi-web
@@ -64,7 +62,7 @@ httpx==0.28.1
     # via devpi-server
 hupper==1.12.1
     # via pyramid
-idna==3.17
+idna==3.18
     # via
     #   anyio
     #   httpx
@@ -128,7 +126,7 @@ pyramid-chameleon==0.3
     # via devpi-web
 python-dateutil==2.9.0.post0
     # via strictyaml
-readme-renderer==44.0
+readme-renderer==45.0
     # via devpi-web
 repoze-lru==0.8
     # via devpi-server
@@ -161,7 +159,7 @@ venusian==3.1.1
     # via pyramid
 waitress==3.0.2
     # via devpi-server
-webob==1.8.9
+webob==1.8.10
     # via pyramid
 whoosh==2.7.4
     # via devpi-web
