@@ -2,7 +2,7 @@
 #    uv pip compile --output-file=test.txt test.in
 build==1.5.0
     # via -r test.in
-certifi==2026.5.20
+certifi==2026.6.17
     # via requests
 cffi==2.0.0
     # via cryptography
@@ -36,7 +36,7 @@ more-itertools==11.1.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-nh3==0.3.5
+nh3==0.3.6
     # via readme-renderer
 packaging==26.2
     # via
