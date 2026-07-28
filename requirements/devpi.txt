@@ -14,11 +14,11 @@ attrs==26.1.0
     #   devpi-web
 beautifulsoup4==4.15.0
     # via devpi-web
-build==1.5.1
+build==1.5.0
     # via
     #   check-manifest
     #   devpi-client
-certifi==2026.6.17
+certifi==2026.7.22
     # via
     #   httpcore
     #   httpx
@@ -31,7 +31,7 @@ charset-normalizer==3.4.9
     # via requests
 check-manifest==0.51
     # via devpi-client
-comrak==0.0.12
+comrak==0.0.16
     # via readme-renderer
 defusedxml==0.7.1
     # via
@@ -99,7 +99,7 @@ plaster==1.1.2
     #   pyramid
 plaster-pastedeploy==1.0.1
     # via pyramid
-platformdirs==4.10.0
+platformdirs==4.11.0
     # via
     #   devpi-client
     #   devpi-server
@@ -145,7 +145,7 @@ setuptools==81.0.0
     #   zope-deprecation
 six==1.17.0
     # via python-dateutil
-soupsieve==2.8.4
+soupsieve==2.9.1
     # via beautifulsoup4
 strictyaml==1.7.3
     # via devpi-server
