@@ -23,7 +23,7 @@ certifi==2026.7.22
     #   httpcore
     #   httpx
     #   requests
-cffi==2.1.0
+cffi==2.1.1
     # via argon2-cffi-bindings
 chameleon==4.6.0
     # via pyramid-chameleon
@@ -81,7 +81,7 @@ legacy-cgi==2.6.4
     #   webob
 nh3==0.3.6
     # via readme-renderer
-packaging==26.2
+packaging==26.3
     # via
     #   build
     #   packaging-legacy
@@ -159,7 +159,7 @@ venusian==3.1.1
     # via pyramid
 waitress==3.0.2
     # via devpi-server
-webob==1.8.10
+webob==1.8.11
     # via pyramid
 whoosh==2.7.4
     # via devpi-web
