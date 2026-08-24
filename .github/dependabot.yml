@@ -5,6 +5,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+     coatl-dev-workflows:
+        patterns:
+          - "coatl-dev/workflows/*"
     labels: ["dependencies"]
     commit-message:
       prefix: "ci"
