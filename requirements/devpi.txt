@@ -18,7 +18,7 @@ build==1.6.1
     # via
     #   check-manifest
     #   devpi-client
-certifi==2026.7.22
+certifi==2026.10.23
     # via
     #   httpcore
     #   httpx
@@ -39,16 +39,16 @@ defusedxml==0.7.1
     #   devpi-web
 devpi-client==7.3.0
     # via -r devpi.in
-devpi-common==4.1.1
+devpi-common==4.1.2
     # via
     #   devpi-client
     #   devpi-server
     #   devpi-web
-devpi-server==6.20.3
+devpi-server==6.21.0
     # via
     #   -r devpi.in
     #   devpi-web
-devpi-web==5.1.1
+devpi-web==5.2.0
     # via -r devpi.in
 docutils==0.23
     # via
@@ -91,7 +91,7 @@ passlib==1.7.4
     # via devpi-server
 pastedeploy==3.1.0
     # via plaster-pastedeploy
-pkginfo==1.13
+pkginfo==2.0
     # via devpi-client
 plaster==1.1.2
     # via
@@ -99,17 +99,17 @@ plaster==1.1.2
     #   pyramid
 plaster-pastedeploy==1.0.1
     # via pyramid
-platformdirs==4.13.0
+platformdirs==4.14.0
     # via
     #   devpi-client
     #   devpi-server
-pluggy==1.6.0
+pluggy==1.7.0
     # via
     #   devpi-client
     #   devpi-server
 py==1.11.0
     # via devpi-server
-pycparser==3.11
+pycparser==3.12
     # via cffi
 pygments==2.21.0
     # via
@@ -124,7 +124,7 @@ pyramid==2.1
     #   pyramid-chameleon
 pyramid-chameleon==0.3
     # via devpi-web
-python-dateutil==2.9.0.post0
+python-dateutil==3.0.0
     # via strictyaml
 readme-renderer==46.0
     # via devpi-web
@@ -145,7 +145,7 @@ setuptools==81.0.0
     #   zope-deprecation
 six==1.17.0
     # via python-dateutil
-soupsieve==3.0.3
+soupsieve==3.0.4
     # via beautifulsoup4
 strictyaml==1.7.3
     # via devpi-server
@@ -155,6 +155,8 @@ typing-extensions==4.16.0
     # via
     #   anyio
     #   beautifulsoup4
+tzdata==2026.6
+    # via python-dateutil
 urllib3==2.8.0
     # via requests
 venusian==3.1.1
@@ -167,5 +169,5 @@ whoosh==2.7.4
     # via devpi-web
 zope-deprecation==6.0
     # via pyramid
-zope-interface==8.6
+zope-interface==8.7
     # via pyramid
